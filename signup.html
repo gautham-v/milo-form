@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milo Facts Sign-Up</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="sidebar">
+        Milo Facts
+    </div>
+    <header class="form-header">
+        <h1>Welcome to Milo Facts!</h1>
+        <p>This is not a real online service! But... feel free to 
+            sign up for some sick facts about Milo anyway!</p>
+    </header>
+    <div class="form-container">
+        <p>Let's do this!</p>
+        <form action="/" method="get" class="signup-form">
+            <div class="left-col-form">
+                <ul>
+                    <li><label for="first-name">First Name</label></li>
+                    <li><input type="text" id="first-name" name="fname" placeholder="Jimmy"  minlength="2" maxlength="40" required></li>
+                    <li><label for="email">Email</label></li>
+                    <li><input type="email" id="email" name="email" placeholder="jjimer@duck.com" required></li>  
+                    <li><label for="password">Password</label></li>
+                    <li><input type="password" id="password" name="password" minlength="8" maxlength="32" required></li>
+                </ul>
+            </div>
+            <div class="right-col-form">
+                <ul>
+                    <li><label for="last-name">Last Name</label></li>
+                    <li><input type="text" id="last-name" name="lname" placeholder="Jimmerson"  minlength="2" maxlength="40" required></li>
+                    <li><label for="phone-number">Phone Number</label></li>
+                    <li><input type="tel" id="phone-number" name="phone-number"  minlength="10" maxlength="10" placeholder="xxx-xxx-xxxx"></li>
+                    <li><label for="confirm-password">Confirm Password</label></li>
+                    <li><input type="password" id="confirm-password" name="confirm-password" minlength="8" maxlength="32" required></li>
+                </ul>
+            </div> 
+        </form>
+    </div>
+    <footer class="form-footer">
+        <button type="submit" class="submit-btn">Create Account</button>
+        <p>Already have an account?<a href="https://www.google.com"> Log in</a></p>
+    </footer>
+</body>
+</html>
