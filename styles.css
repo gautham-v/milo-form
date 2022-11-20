@@ -22,7 +22,7 @@ body{
 
 #sidebar{
     grid-area: sidebar;
-    background-image: url("./images/milo-sidebar.jpeg");
+    /* background-image: url("./images/milo-sidebar.jpeg"); */
     background-size: cover;
     background-position: -50px;
     position: relative;
