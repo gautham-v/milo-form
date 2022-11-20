@@ -22,8 +22,9 @@ body{
 
 #sidebar{
     grid-area: sidebar;
-    background-image: url("/images/sidebar-pic.avif");
+    background-image: url("/images/milo-sidebar.jpeg");
     background-size: cover;
+    background-position: -50px;
     position: relative;
     width: var(--sidebar-width);
     text-align: center;
@@ -71,7 +72,7 @@ body{
     background-color: rgb(255, 255, 255);
     padding: 1rem 0rem 0rem 2rem;
     box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
-    width: 66.7vw;
+    width: 70vw;
 }
 
 footer{
@@ -106,22 +107,26 @@ label{
 input{
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 4px;
-    outline: none;
+    /* outline: none; */
 }
 
 input:focus{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    /* outline: none; */
 }
 
 input:invalid{
     border: 1px solid #D55C5F;
-    /* box-shadow: none; */
 }
 
-/* input:valid{
-    box-shadow: none;
-} */
+input:valid{
+    border: 1px solid #5cd588;
+}
+
+.password-li > p, .confirm-password-li > p {
+    color: #D55C5F;
+    margin: 6px;
+    font-size: 8px;
+}
 
 .submit-btn{
     padding: 10px 50px;
@@ -132,6 +137,11 @@ input:invalid{
     border: 1px solid rgb(69, 131, 69);
     border-radius: 12px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.submit-btn:disabled{
+    background-color: rgb(129, 129, 129);
+    border: rgb(129, 129, 129);
 }
 
 /* medium sized screen */
@@ -145,11 +155,9 @@ input:invalid{
             'footer';
     }
     #sidebar{
-        grid-area: sidebar;
-        background-image: url("/images/sidebar-pic.avif");
-        background-size: cover;
         width: 100vw;
         height: 20vh;
+        background-position: 50% 80%;
     }
     .form-header{
         padding-top: 2rem;
@@ -176,9 +184,6 @@ input:invalid{
             'footer';
     }
     #sidebar{
-        grid-area: sidebar;
-        background-image: url("/images/sidebar-pic.avif");
-        background-size: cover;
         width: 100vw;
         height: 20vh;
     }

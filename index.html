@@ -23,38 +23,63 @@
     </header>
     <div class="form-container">
         <p>Let's do this!</p>
-        <form action="/" method="get" class="signup-form">
+        <form id="signup-form" action="/" method="get" class="signup-form">
             <ul>
                 <li>
                     <label for="first-name">First Name</label><br>
-                    <input type="text" id="first-name" name="fname" placeholder="Jimmy"  minlength="2" maxlength="40" required>
+                    <input type="text" id="first-name" name="fname"  minlength="2" maxlength="40" required>
                 </li>
                 <li>
                     <label for="last-name">Last Name</label><br>
-                    <input type="text" id="last-name" name="lname" placeholder="Jimmerson"  minlength="2" maxlength="40" required>
+                    <input type="text" id="last-name" name="lname"  minlength="2" maxlength="40" required>
                 </li>
                 <li>
                     <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" placeholder="jjimer@duck.com" required>
+                    <input type="email" id="email" name="email" required>
                 </li>
                 <li>
                     <label for="phone-number">Phone Number</label><br>
-                    <input type="tel" id="phone-number" name="phone-number"  minlength="10" maxlength="10" placeholder="xxx-xxx-xxxx">
+                    <input type="tel" id="phone-number" name="phone-number"  minlength="10" maxlength="10">
                 </li>
-                <li>
+                <li class="password-li">
                     <label for="password">Password</label><br>
                     <input type="password" id="password" name="password" minlength="8" maxlength="32" required>
                 </li>
-                <li>
+                <li class="confirm-password-li">
                     <label for="confirm-password">Confirm Password</label><br>
                     <input type="password" id="confirm-password" name="confirm-password" minlength="8" maxlength="32" required>
                 </li>
-            </ul>
+            </ul> 
         </form>
     </div>
     <footer class="form-footer">
-        <button type="submit" class="submit-btn">Create Account</button>
+        <button type="submit" class="submit-btn" form="signup-form" value="Update">Create Account</button>
         <p>Already have an account?<a href="https://www.google.com"> Log in</a></p>
     </footer>
 </body>
+<script>
+    function match(){
+        if (document.getElementById('password').value !== document.getElementById('confirm-password').value){
+            console.log(document.getElementById('password').value);
+            console.log(document.getElementById('password').value);
+            passwordField.appendChild(para);
+            para.textContent = '* Passwords do not match';
+            document.querySelector(".submit-btn").disabled = true;
+            document.getElementById('password').invalid = true;
+        }
+        else{
+            para.textContent = '';
+            document.querySelector(".submit-btn").disabled = false;
+            document.getElementById('password').invalid = false;
+        }
+    }
+    
+    document.getElementById('password').addEventListener('input',match);
+    document.getElementById('confirm-password').addEventListener('input',match);
+    var passwordField = document.querySelector('.confirm-password-li');
+    var para = document.createElement('p');
+
+    console.log(passwordField);
+    
+</script>
 </html>
